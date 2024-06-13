@@ -8,17 +8,17 @@
             string password = "12345";
             string userInput;
 
-            while (quantityAttempts > 0)
+            for (int i = 0; i < quantityAttempts; i++)
             {
                 userInput = Console.ReadLine();
 
                 if (userInput == password)
                 {
                     Console.WriteLine("Пароль подобран!");
+                    return;
                 }
                 else
                 {
-                    quantityAttempts--;
                     Console.WriteLine("Введите пароль еще раз!");
                 }
             }
